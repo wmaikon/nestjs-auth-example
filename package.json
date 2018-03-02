@@ -1,0 +1,39 @@
+{
+  "name": "nestjs-auth-example",
+  "version": "1.0.0",
+  "description": "nestjs-auth-example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloakedch/nestjs-auth-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^4.6.4",
+    "@nestjs/core": "^4.6.4",
+    "@nestjs/microservices": "^4.6.4",
+    "@nestjs/mongoose": "^3.0.1",
+    "@nestjs/testing": "^4.6.1",
+    "@nestjs/websockets": "^4.5.8",
+    "bcrypt": "^1.0.3",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.7",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6",
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^7.2.5",
+    "@types/mongoose": "^5.0.4",
+    "@types/node": "^9.4.6",
+    "nodemon": "^1.17.1",
+    "ts-node": "^5.0.0"
+  }
+}
