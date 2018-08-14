@@ -1,12 +1,19 @@
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { Config } from './config';
-import { UserModule } from './user/user.module';
-import { AppController } from './app.controller';
+import { Module, ValidationPipe } from '@nestjs/common';
+import { APP_PIPE } from '@nestjs/core';
+import { AppController } from '@app/app.controller';
+import { AppService } from '@app/app.service';
+import { AuthModule } from '@auth/auth.module';
+import { UserModule } from '@user/user.module';
 
 @Module({
-  imports: [MongooseModule.forRoot(Config.db.uri), UserModule],
+  imports: [UserModule, AuthModule],
   controllers: [AppController],
-  components: [],
+  providers: [AppService,
+    // global pipe
+    {
+      provide: APP_PIPE,
+      useValue: new ValidationPipe({ transform: true, whitelist: true, forbidNonWhitelisted: true })
+    }
+  ]
 })
-export class ApplicationModule {}
+export class AppModule {}

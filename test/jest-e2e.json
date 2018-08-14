@@ -1,0 +1,21 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": ".",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "testEnvironment": "node",
+  "moduleNameMapper": {
+    "@app/(.*)": "<rootDir>/../src/$1",
+    "@user/(.*)": "<rootDir>/../src/user/$1",
+    "@auth/(.*)": "<rootDir>/../src/auth/$1",
+    "@token/(.*)": "<rootDir>/../src/token/$1",
+    "@constants/(.*)": "<rootDir>/../src/common/constants/$1",
+    "@database/(.*)": "<rootDir>/../src/common/database/$1",
+    "@decorators/(.*)": "<rootDir>/../src/common/decorators/$1",
+    "@filters/(.*)": "<rootDir>/../src/common/filters/$1",
+    "@guards/(.*)": "<rootDir>/../src/common/guards/$1",
+    "@pipes/(.*)": "<rootDir>/../src/common/pipes/$1"
+  }
+}

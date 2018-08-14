@@ -5,18 +5,31 @@
     "noImplicitAny": false,
     "removeComments": true,
     "noLib": false,
+    "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es6",
     "sourceMap": true,
     "allowJs": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": [ "./*" ],
+      "@user/*": [ "user/*" ],
+      "@auth/*": [ "auth/*" ],
+      "@token/*": [ "token/*" ],
+      "@constants/*": [ "common/constants/*" ],
+      "@database/*": [ "common/database/*" ],
+      "@decorators/*": [ "common/decorators/*" ],
+      "@filters/*": [ "common/filters/*" ],
+      "@guards/*": [ "common/guards/*" ],
+      "@pipes/*": [ "common/pipes/*" ]
+    }
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
+    "node_modules"
   ]
 }

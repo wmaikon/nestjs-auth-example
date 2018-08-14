@@ -1,10 +1,12 @@
-import { ArrayUnique, IsEmail, IsEnum, IsOptional, IsString } from 'class-validator';
+import { ArrayUnique, IsEmail, IsEnum, IsString, IsOptional } from 'class-validator';
 import { UserRoleEnum } from '@token/enums/user-role.enum';
 
-export class CreateUserDto {
+export class UpdateUserDto {
+  @IsOptional()
   @IsEmail()
   readonly email: string;
 
+  @IsOptional()
   @IsString()
   readonly password: string;
 
